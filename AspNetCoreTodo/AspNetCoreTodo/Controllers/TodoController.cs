@@ -19,13 +19,10 @@ namespace AspNetCoreTodo.Controllers
                 _todoItemService = todoItemService;
             } 
 
-            public async Tasks<IActionResult> Index()
+            public async Task<IActionResult> Index()
             {
- //               public IActionResult Index()
- //               {   
-                    // Get to-do items from database
-                    var items = await _todoItemService.GetIncompleteItemsAsync();            
- //               }
+                // Get to-do items from database
+                var items = await _todoItemService.GetIncompleteItemsAsync();            
 
                 // Put items into a model
                 TodoViewModel viewModel = new TodoViewModel()
