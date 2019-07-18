@@ -14,7 +14,10 @@ namespace AspNetCoreTodo.Data
         {
         }
  
+        //tengo un DbSet por cada tabla en base de datos
         public DbSet<TodoItem> Items { get; set; }
+
+
         protected override void OnModelCreating(ModelBuilder builder)
         {
         base.OnModelCreating(builder);
